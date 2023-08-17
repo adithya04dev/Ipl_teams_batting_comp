@@ -71,7 +71,7 @@ def main():
         
         plt.title('Scatter Plot ')
         plt.xlabel('Strike Rate')
-        plt.ylabel('Average Runs')
+        plt.ylabel('Run rate')
        
         
         st.pyplot(plt)
