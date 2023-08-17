@@ -55,17 +55,19 @@ def main():
         result=batcomp.calculate(overs,bowling_type,Season,10)
        
         result1=result.sort_values(by='strike_rate')
-        
+        result1['strike_rate']=(result1['strike_rate']/100)*6)
+        result1['strike_rate']=result1['strike_rate'].rename('run_rate')
         # Assuming df is your DataFrame containing the required columns
         sns.set(style="white")
         
         # Create the scatter plot
         plt.figure(figsize=(10, 6))
-        scatter_plot = sns.scatterplot(y='average_runs', x='strike_rate', data=result1)
+        scatter_plot = sns.scatterplot(y='average_runs', x='run_rate', data=result1)
+        
         
         # Annotate the points with player names
         for i, row in result1.iterrows():
-            scatter_plot.text(row['strike_rate'],row['average_runs'], row['team_name'], fontsize=8, alpha=0.7)
+            scatter_plot.text(row['run_rate'],row['average_runs'], row['team_name'], fontsize=8, alpha=0.7)
         
         plt.title('Scatter Plot ')
         plt.xlabel('Strike Rate')
