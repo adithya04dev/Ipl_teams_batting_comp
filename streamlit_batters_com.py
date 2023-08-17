@@ -55,7 +55,7 @@ def main():
         result=batcomp.calculate(overs,bowling_type,Season,10)
        
         result1=result.sort_values(by='strike_rate')
-        result1['strike_rate']=(result1['strike_rate']/100)*6)
+        result1['strike_rate']=(result1['strike_rate']/100)*6
         result1['strike_rate']=result1['strike_rate'].rename('run_rate')
         # Assuming df is your DataFrame containing the required columns
         sns.set(style="white")
