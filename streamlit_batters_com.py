@@ -79,7 +79,7 @@ def main():
         
         
         
-        st.write("All batters stats")
+        st.write("All Teams stats")
         st.dataframe(result1)
         
         
