@@ -70,8 +70,8 @@ def main():
             scatter_plot.text(row['run_rate'],row['average_runs'], row['team_name'], fontsize=8, alpha=0.7)
         
         plt.title('Scatter Plot ')
-        plt.xlabel('Strike Rate')
-        plt.ylabel('Run rate')
+        plt.xlabel('Runrate')
+        plt.ylabel('Average')
        
         
         st.pyplot(plt)
