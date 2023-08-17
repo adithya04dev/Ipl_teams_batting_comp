@@ -56,7 +56,7 @@ def main():
        
         result1=result.sort_values(by='strike_rate')
         result1['strike_rate']=(result1['strike_rate']/100)*6
-        result1['strike_rate']=result1['strike_rate'].rename('run_rate')
+        result1.rename(columns = {'strike_rate':'run_rate'}, inplace = True)
         # Assuming df is your DataFrame containing the required columns
         sns.set(style="white")
         
